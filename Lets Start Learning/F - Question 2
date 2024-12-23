@@ -1,1 +1,25 @@
+//Find factorial of n numbers .
 
+#include <iostream>
+using namespace std;
+
+int factN(int n);
+
+int main()
+{
+    int n;
+    cout<<"Enter a number : ";
+    cin>>n;
+    
+    cout<<factN(n);
+    
+    return 0;
+}
+
+int factN(int n){
+     int fact=1;
+     for(int i=1;i<n;i++){
+          fact = fact+fact*i;
+     }
+     return fact;
+}
