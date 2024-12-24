@@ -1,1 +1,26 @@
 // Calculate sum of digits of a number .
+
+#include <iostream>
+using namespace std;
+
+int SumOfDigits(int n);
+
+int main() {
+    int n;
+    cout << "Enter a Number: ";
+    cin >> n;
+
+    cout << "Sum = " << SumOfDigits(n) << "\n";
+
+    return 0;
+}
+
+int SumOfDigits(int n) {
+    int digsum = 0;
+    while (n > 0) {
+        int LastDigit = n % 10; 
+        n = n / 10;             
+        digsum = digsum + LastDigit;
+    }
+    return digsum;
+}
