@@ -1,1 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int fact(int n);
+int cal(int n, int r);
+
+//Calculate nCr Binomial Cofficient for n & r
+
+int main()
+{
+    int n, r;
+    cout << "Enter Value of n and r: ";
+    cin >> n >> r;
+
+    if (n >= r && n >= 0 && r >= 0) {
+        cout << "nCr = " << cal(n, r) << "\n";
+    } else {
+        cout << "Invalid input. Ensure n >= r and both n and r are non-negative.\n";
+    }
+
+    return 0;
+}
+
+int cal(int n, int r) {
+    int fact_n = fact(n);
+    int fact_r = fact(r);
+    int fact_nCr = fact(n - r);
+
+    return fact_n / (fact_r * fact_nCr);
+}
+
+int fact(int n) {
+    int fact = 1;
+    for (int i = 1; i <= n; i++) {
+        fact = fact*i;
+    }
+    return fact;
+}
 
