@@ -1,6 +1,6 @@
 Question 1 
 
-// Find sum of first n natural numbers .
+// Find sum of first n Natural Numbers .
 
 #include <iostream>
 using namespace std;
