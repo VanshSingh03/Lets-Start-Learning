@@ -1,1 +1,26 @@
+// Convert Binary To decimal 
 
+#include <iostream>
+using namespace std;
+
+int BinaryToDec(int BinaryNum){
+     int ans=0;int pow=1;
+     
+     while(BinaryNum>0){
+          int rem = BinaryNum%10;
+          ans += rem*pow;
+          
+          BinaryNum /= 10;
+          pow *= 2;
+     }
+     return ans ;
+}
+int main()
+{
+    int BinaryNum;
+    cout<<"Enter a Number In Binary Form : ";
+    cin>>BinaryNum;
+    
+    cout<<"Decimal Number : "<<BinaryToDec(BinaryNum);
+    return 0;
+}
