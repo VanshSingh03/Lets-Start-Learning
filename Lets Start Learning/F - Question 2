@@ -1,4 +1,4 @@
-//Find factorial of n numbers .
+//Find factorial of n Numbers .
 
 #include <iostream>
 using namespace std;
