@@ -1,1 +1,29 @@
+// Linear Search In Array .
 
+#include <iostream>
+using namespace std;
+
+int linearsearch(int num[],int target){
+   
+    for(int i=0;i<5;i++){
+         if(num[i]==target){
+              return i ;
+         }
+    }
+    return -1;  
+}
+
+int main()
+{
+    int num[5], target ;
+    cout<<"Enter Five Numbers : ";
+    for(int i=0;i<5;i++){
+         cin>>num[i];
+    }
+    
+    cout<<"Enter target : ";
+    cin>>target;
+    
+    cout<<linearsearch(num,target)<<endl;
+    return 0;
+}
