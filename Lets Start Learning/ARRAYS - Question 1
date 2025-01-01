@@ -1,1 +1,29 @@
+//Find Min and Max num in an Array.
 
+#include <iostream>
+#include <climits> // Required for INT_MAX
+using namespace std;
+
+int main()
+{
+    int marks[5];
+    cout << "Enter Marks of 5 Students: " << "\n";
+
+    // Loop to take input for the array
+    for (int i = 0; i < 5; i++) {
+        cin >> marks[i];
+    }
+
+    int minimum = INT_MAX; // important 
+
+    // Loop to find the smallest value in the array
+   for (int i = 0; i < 5; i++) {
+        if (marks[i] < minimum) {
+            minimum = marks[i];
+        }
+        //Second way of doing this
+        minimum = min(marks[i],minimum) ;
+    }
+    cout << "Minimum Marks is: " << minimum;
+    return 0;
+}
